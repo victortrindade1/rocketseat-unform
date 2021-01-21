@@ -2,11 +2,15 @@
 
 Fonte: https://www.youtube.com/watch?v=P65RJTTqkN4
 
-O Unform mudou. Deixou de ser o `unform` pra ser `@unform/core` + `@unform/web`
-ou `@unform/mobile`. Agora ele não fica mais re-renderizando o componente a cada
+O Unform mudou. Deixou de ser o `unform` pra ser `@unform/core` + (`@unform/web`
+ou `@unform/mobile`). Agora ele não fica mais re-renderizando o componente a cada
 digitada.
 
 Documentação: https://unform.dev
+
+> Pelo q li no facebook, o `react-hook-form` é o melhor de todos. É tão
+> performático qnt o unform, recebe mais integrações com outras libs e é bem
+> menos verboso.
 
 ## src/components/Form/Input/index.js
 
@@ -18,7 +22,7 @@ O Input agora não é mais feito pela lib. Em vez disso, vc agora faz apenas um
 
 ### useField e registerField
 
-Função q vc usa para cada campo de um form. Vc passa a ter acesso aos dados
+A função useField é usada para cada campo de um form. Vc passa a ter acesso aos dados
 necessários para colocar em outra função, a `registerField`. A `registerField` é
 usada dentro do `useEffect` qnd carrega a página.
 
@@ -53,6 +57,9 @@ export default Input;
 ```
 
 ## src/components/Form/index.js
+
+Se quiser q os componentes estejam dentro de pastas dentro de componentes, então
+tem q ter um export pra cada component desses num index da pasta.
 
 ```javascript
 export { default as Input } from "./Input";
